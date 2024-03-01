@@ -1,0 +1,56 @@
+<section class="container-fluid">
+  <div class="row">
+    <h5>{{title}}</h5>
+    <p class="text-white">Lista de empleados</p>
+    <div class="col col-md-1">
+      Número
+    </div>
+
+    <div class="col col-md-2">
+      Nombre
+    </div>
+
+    <div class="col col-md-2">
+      Rango
+    </div>
+
+    <div class="col col-md-2">
+      Salario
+    </div>
+  </div>
+
+</section>
+<br>
+<section *ngFor="let worker of workers,let i = index" class="container-fluid ">
+
+  <div class="row">
+
+    <div class="col col-md-1">
+      {{i+1}}
+    </div>
+
+    <div class="col col-md-2">
+      {{worker.nombre}}
+    </div>
+
+    <div class="col col-md-2">
+      {{worker.cargo}}
+    </div>
+
+    <div class="col col-md-2">
+      {{worker.salario}}
+    </div>
+
+    <div class="col col-md-2">
+      <a class="btn btn-primary" [routerLink]="['/update',1]" [queryParams]="{id: i}">Modificar</a>
+    </div>
+
+    <div class="col col-md-2">
+      <a class="btn btn-warning" [routerLink]="['/update',2]" [queryParams]='{id: i}'>Eliminar</a>
+    </div>    
+
+  </div>
+
+
+
+</section>

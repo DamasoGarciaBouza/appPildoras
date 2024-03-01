@@ -1,0 +1,35 @@
+<section class="container-fluid">
+
+  <div class="row">
+    <h5>{{title}}</h5>
+  </div>
+
+  <form class="form-group row">
+
+    <div class="form-group col-md-3">
+
+      <label for="nombre">Nombre:</label>
+      <input id="nombre" name="nombre" type="text" class="form-control" [(ngModel)]="nameInput" placeholder="nombre">
+
+      <label for="cargo">Cargo:</label>
+      <input id="cargo" name="cargo" type="text" class="form-control" [(ngModel)]="cargoInput" placeholder="cargo">
+
+      <label for="salario">Salario:</label>
+      <input id="salario" name="salario" type="text" class="form-control" [(ngModel)]="salarioInput"[placeholder]="0">
+
+      <br>
+      <input type="submit" value={{title}} class="btn-primary" (click)="runAction()">
+
+    </div>
+
+  </form>
+
+  <br><br>
+
+  <div class="row">
+    <div class="form-group col-md-3">
+      <button class="btn-sm btn-outline-secondary" (click)="goBack()">Volver</button>
+    </div>
+  </div>
+
+</section>

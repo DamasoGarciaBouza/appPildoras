@@ -1,0 +1,16 @@
+.row{
+    margin-left: 2em;
+}
+
+.col {
+    background-color: antiquewhite;
+    padding: 1em;
+    border-radius: 0.2em;
+    margin: 1px;
+}
+
+h4,h5,h6{
+  color: aliceblue;
+  font-weight: bolder;
+  font-size: x-large;
+}
